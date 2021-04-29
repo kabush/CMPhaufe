@@ -53,7 +53,6 @@ proj.path.analysis.name = 'analysis/';
 
 %% ----------------------------------------
 %% Specific Data Paths
-
 proj.path.haufe.cter = [proj.path.home,'data/CTER2haufe/haufe/id_ex_gm_mdl/'];
 proj.path.haufe.inca = [proj.path.home,'data/INCA2haufe/haufe/id_ex_gm_mdl/'];
 proj.path.haufe.hr = [proj.path.home,'data/HR2haufe/haufe/id_ex_gm_mdl/'];
