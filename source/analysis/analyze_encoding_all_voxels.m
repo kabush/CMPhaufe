@@ -6,6 +6,14 @@ logger(['************************************************'],proj.path.logfile);
 logger([' Compare CTER Encoding to INCA and HR (All Voxels) '],proj.path.logfile);
 logger(['************************************************'],proj.path.logfile);
 
+%% Set-up Directory Structure for models
+if(proj.flag.clean_build)
+    disp(['Removing ',proj.path.analysis.cmp]);
+    eval(['! rm -rf ',proj.path.analysis.cmp]);
+    disp(['Creating ',proj.path.analysis.cmp]);
+    eval(['! mkdir ',proj.path.analysis.cmp]);
+end
+
 try
 
     %% Load encoding
@@ -54,6 +62,11 @@ try
     mdl_fe = fitlme(tbl,['trg ~ 1 + pred']);
     mdl = mdl_fe;
     logger(' ',proj.path.logfile);
+
+    save([proj.path.analysis.cmp,'hr_cter_all_vox_mdl.mat'],'mdl');
+
+    out_tbl = table(m_hr,m_cter,'VariableNames',{'hr','cter'});    
+    writetable(out_tbl,'supp_fig_1_A_all_voxels.txt','Delimiter','\t');
     
     %% Examine Main Effect
     [~,~,FE] = fixedEffects(mdl);
@@ -118,6 +131,11 @@ try
     mdl_fe = fitlme(tbl,['trg ~ 1 + pred']);
     mdl = mdl_fe;
     logger(' ',proj.path.logfile);
+
+    save([proj.path.analysis.cmp,'inca_cter_all_vox_mdl.mat'],'mdl');
+
+    out_tbl = table(m_inca,m_cter,'VariableNames',{'inca','cter'});    
+    writetable(out_tbl,'supp_fig_1_B_all_voxels.txt','Delimiter','\t');
     
     %% Examine Main Effect
     [~,~,FE] = fixedEffects(mdl);

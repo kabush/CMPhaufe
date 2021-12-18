@@ -54,6 +54,14 @@ try
     mdl_fe = fitlme(tbl,['trg ~ 1 + pred']);
     mdl = mdl_fe;
     logger(' ',proj.path.logfile);
+
+    save([proj.path.analysis.cmp,'hr_cter_sig_vox_mdl.mat'],'mdl');
+
+    out_tbl = table(m_hr,m_cter,'VariableNames',{'hr','cter'});    
+    writetable(out_tbl,'supp_fig_1_C_all_voxels.txt','Delimiter','\t');
+
+
+
     
     %% Examine Main Effect
     [~,~,FE] = fixedEffects(mdl);
@@ -118,6 +126,12 @@ try
     mdl_fe = fitlme(tbl,['trg ~ 1 + pred']);
     mdl = mdl_fe;
     logger(' ',proj.path.logfile);
+
+    save([proj.path.analysis.cmp,'inca_cter_sig_vox_mdl.mat'],'mdl');
+
+    out_tbl = table(m_inca,m_cter,'VariableNames',{'inca','cter'});    
+    writetable(out_tbl,'supp_fig_1_D_all_voxels.txt','Delimiter','\t');
+
     
     %% Examine Main Effect
     [~,~,FE] = fixedEffects(mdl);

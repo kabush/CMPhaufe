@@ -1,0 +1,56 @@
+************************************************
+ Compare CTER Encoding to INCA and HR (All Voxels) 
+************************************************
+CTER v voxels, n=41210
+CTER a voxels, n=41210
+HR v voxels, n=43577
+INCA a voxels, n=44894
+ 
+VAL Joint voxels, n=38968
+ 
+Fixed Effects are significant
+  FE(1)=-0.10544
+     p=1.997e-45
+  FE(2)=0.78139
+     p=0
+  All Rsqr=0.36543
+  Fsqr=0.57586
+ 
+ARO Joint voxels, n=38659
+ 
+Fixed Effects are significant
+  FE(1)=-0.084118
+     p=2.0073e-34
+  FE(2)=0.60676
+     p=0
+  All Rsqr=0.31145
+  Fsqr=0.45232
+ 
+************************************************
+ Compare CTER Encoding to INCA and HR (Sig. Voxels) 
+************************************************
+CTER v voxels, n=6484
+CTER a voxels, n=6858
+HR v voxels, n=10524
+INCA a voxels, n=8727
+ 
+VAL Joint voxels, n=3543
+ 
+Fixed Effects are significant
+  FE(1)=0.17668
+     p=1.0566e-15
+  FE(2)=1.161
+     p=0
+  All Rsqr=0.86996
+  Fsqr=6.6899
+ 
+ARO Joint voxels, n=2560
+ 
+Fixed Effects are significant
+  FE(1)=-0.066128
+     p=0.0062774
+  FE(2)=0.95999
+     p=0
+  All Rsqr=0.85644
+  Fsqr=5.9656
+ 
